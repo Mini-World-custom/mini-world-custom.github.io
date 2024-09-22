@@ -10,90 +10,156 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+		<!-- Style pour limiter la taille des images et positionner les flèches -->
+		<style>
+			.swiper-container {
+				position: relative;
+				width: 100%;
+				max-width: 350px;
+				margin: 0 auto; /* Centrer le carrousel */
+			}
+
+			.swiper-slide img {
+				max-width: 350px;
+				max-height: 350px;
+				object-fit: cover;
+				display: block;
+				margin: 0 auto;
+			}
+
+			/* Position des flèches proches des images */
+			.swiper-button-next, .swiper-button-prev {
+				color: black; /* Couleur des flèches */
+				width: auto;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			.swiper-button-next {
+				right: 10px; /* Flèche suivante proche de l'image */
+			}
+
+			.swiper-button-prev {
+				left: 10px; /* Flèche précédente proche de l'image */
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
-			<header id="header">
-				<a href="../index.html" class="title">Boutique</a>
-				<nav>
-					<ul>
-						<li><a href="../index.html">Menu</a></li>
-					</ul>
-				</nav>
-			</header>
+		<header id="header">
+			<a href="../index_accessoires.html" class="title">Boutique</a>
+			<nav>
+				<ul>
+					<li><a href="../index_accessoires.html">Retour</a></li>
+					<li><a href="https://www.instagram.com/miniworld_custom/">Instagram</a></li>
+					<li><a href="../index.html">Menu</a></li>
+				</ul>
+			</nav>
+		</header>
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1>Biberon en verre</h1>
-								<div class="row gtr-uniform">				
-								<div class="col-4"><span class="image fit"><img src="images/produit101.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/produit102.jpg" alt="" /></span></div>
-							</div>
-							<h1 class="major" align="right">10 €</h1>
-							<blockquote>1 biberon en verre, ideal pour little, passe au micro onde et sa protection en silicone évite de se bruler les doigts</blockquote>
-							<div>
-							<div>
-								<h2>Caracteristique</h2>
-								<div class="table-wrapper">
-									<table>
-										<tbody>
-											<tr>
-												<td>Contient</td>
-												<td>infos sur le produit</td>
-												<td> 1 biberon - 1 tetine - 1 capuchon </td>
-											</tr>
-											<tr>
-												<td>Thème</td>
-												<td>thème du produit</td>
-												<td>biberon</td>
-											</tr>
-											<tr>
-												<td>Capacité</td>
-												<td>Capacité du produit</td>
-												<td>260 ml</td>
-											</tr>
-											<tr>
-												<td>Poids</td>
-												<td>poids du produit</td>
-												<td> 150 gr</td>
-											</tr>
-											<tr>
-												<td>Matériau</td>
-												<td>type de matériau du produit</td>
-												<td>verre - silicone</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
+			<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<h1>Biberon en verre</h1>
+					
+					<!-- Carrousel Swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="images/produit101.jpg" alt="Biberon en verre 1" /></div>
 						</div>
-					</section>
+						<!-- Pagination et Navigation -->
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
 
-			</div>
+					<h1 class="major" align="right">10 €</h1>
+					<blockquote>1 biberon en verre, idéal pour little, passe au micro-ondes et sa protection en silicone évite de se brûler les doigts
+						<br><br>
+						pour toute commande merci de nous contacter sur notre Instagram !
+					</blockquote>
+					
+					<!-- Caractéristiques du produit -->
+					<div>
+						<h2>Caractéristiques</h2>
+						<div class="table-wrapper">
+							<table>
+								<tbody>
+									<tr>
+										<td>Contient</td>
+										<td>Infos sur le produit</td>
+										<td>1 biberon - 1 tétine - 1 capuchon</td>
+									</tr>
+									<tr>
+										<td>Thème</td>
+										<td>Thème du produit</td>
+										<td>Biberon</td>
+									</tr>
+									<tr>
+										<td>Capacité</td>
+										<td>Capacité du produit</td>
+										<td>260 ml</td>
+									</tr>
+									<tr>
+										<td>Poids</td>
+										<td>Poids du produit</td>
+										<td>150 gr</td>
+									</tr>
+									<tr>
+										<td>Matériau</td>
+										<td>Type de matériau du produit</td>
+										<td>Verre - Silicone</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
 
 		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Mini-World. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+		<footer id="footer" class="wrapper alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Mini-World. All rights reserved.</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
 
 		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
 
+		<!-- Swiper JS Initialization -->
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+		</script>
 	</body>
 </html>
